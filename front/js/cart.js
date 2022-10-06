@@ -243,7 +243,7 @@ submitButton.addEventListener("click", function (c) {
              nameRegex.test(lastName.value) == false ||
              addressRegex.test(address.value) == false || 
              nameRegex.test(city.value) == false ||
-            emailRegex.test(email.value) == false) {
+             emailRegex.test(email.value) == false) {
       alert("Veuillez renseigner des coordonnées valides")
     }
     else {

@@ -11,7 +11,7 @@ fetch("http://localhost:3000/api/products/" + productId)
     }
 })
 .then(function(article){
-  /* afficher les informations sur le produit */
+  /* Creation du DOM pour le produit */
   let productImage = document.createElement("img");
   document.querySelector(".item__img").appendChild(productImage);
   productImage.src = article.imageUrl;
