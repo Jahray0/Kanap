@@ -249,7 +249,7 @@ let submitButton = document.getElementById('order');
 submitButton.addEventListener("click", function (c) {
   /* si le panier est vide */
   if (!cartContent) {
-    alert("votre panier est vide");
+    alert("Votre panier est vide");
   }
   else {
     c.preventDefault();
@@ -260,7 +260,7 @@ submitButton.addEventListener("click", function (c) {
     let inputEmail = document.getElementById("email").value;
 
     if (!inputFirstName || !inputLastName || !inputAddress || !inputCity || !inputEmail) {
-      alert("Veuillez renseigner tous les champs du formulaire")
+      alert("Woups ! Il semble qu'un ou plusieurs champs n'on pas été renseigné")
     }
     else if (nameRegex.test(firstName.value) == false || 
              nameRegex.test(lastName.value) == false ||
