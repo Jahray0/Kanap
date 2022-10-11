@@ -223,6 +223,7 @@ form.address.addEventListener("change", () => {
   if (addressRegex.test(address.value) == false) 
   {
     addressError.innerText = "Format d'adresse invalide";
+    console.log(address.value);
   }
 })
 
@@ -245,7 +246,7 @@ let submitButton = document.getElementById('order');
 //console.log(submitButton);
 submitButton.addEventListener("click", function (c) {
   /* si le panier est vide */
-  if (!cart) {
+  if (!cartContent) {
     alert("votre panier est vide");
   }
   else {
@@ -268,7 +269,7 @@ submitButton.addEventListener("click", function (c) {
     }
     else {
       let orderProducts = [];
-      for (product of cart) 
+      for (product of cartContent) 
       {
         orderProducts.push(product.id);
       }
