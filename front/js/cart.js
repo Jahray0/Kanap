@@ -168,6 +168,8 @@ function changeQuantity(e) {
   for (let i in cartContent) {
     if (parentId == `${cartContent[i].id}` && parentColor == `${cartContent[i].color}`) {
       cartContent[i].quantity = e.target.value;
+      console.log(cartContent[i].quantity);
+      //Si qte hors fourchette (!1-100)
       if (e.target.value <= 0 || e.target.value > 100) {
         let orderSubmit = document.querySelector(".cart__order__form__submit");
         e.target.style.color = "red";
