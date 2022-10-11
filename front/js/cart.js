@@ -111,7 +111,7 @@ function displayCart(products) {
 function displayTotal() {
   getProducts.then( (products) => display(products) )
     .catch( (error) => console.error(`Fetch problem displayTotal: ${error}`) );
-  }
+}
 
 
 /* Affichage des qte et des prix */
